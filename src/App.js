@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import ProceduralMap from 'procedural-gl-react';
+
+import Deck from './Deck'
+
 //import waypoints from './waypoints.json'
 import {useState, useRef} from 'react';
 
@@ -32,6 +35,8 @@ function App() {
   const containerRef = useRef(null);
   const [waypoint, setWaypoint] = useState(waypoints);
 
+  return <Deck/>
+
   return (
     <div className="App">
 
@@ -56,7 +61,7 @@ function App() {
                     }/>
         </div>
 
-          <div className="gallery_scroller">
+        <div className="gallery_scroller">
 
               {waypoints.map((w, i) => <div key={i} className="colored_card" >
                   test
